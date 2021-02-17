@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Json</title>
+</head>
+<body>
+<p id="hasil"></p> 
+<button onclick="klik()">Klik</button>
+<script>
+    // var xhr = new XMLHttpRequest();
+    // xhr.onreadystatechange = function(){
+    //     if(xhr.readyState == 4 && xhr.status == 200)
+    //     {
+    //         document.getElementById("hasil").innerHTML = xhr.responseText;
+    //     }
+    // }
+    // xhr.open("GET","file.txt",true);
+    // xhr.send(); -->
+    var huruf = ["gatot","fifi","amanda","vito"];
+    var kata = "Gatot Subroto";
+    document.getElementById("hasil").innerHTML = kata.split("").reverse().join("");
+    function klik(){   
+        // let balik = huruf.reverse();
+        huruf.reverse();
+        document.getElementById("hasil").innerHTML = huruf;
+     }
+</script>
+
+    <!-- <script>
+        var data = [
+            {
+                nama : "Gatot Subroto",
+                usia : 46,           
+            },
+            {
+                nama : "Fifi Shandra",
+                usia : 46,
+            },
+            {
+                nama : "Amanda",
+                usia : 19,
+            },
+            {
+                nama : "Vito",
+                usia : 9,   
+            }
+        ];
+        console.log(JSON.stringify(data));
+    </script> -->
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Jquery</title>
+    <style>
+        .kotak{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            position: absolute;
+            margin-top: 30px;
+            border-radius: 100px;
+            text-align: center;
+            padding-top: 120px;
+        }
+    </style>
+</head>
+<body>
+    <button id="klik">Push To Start</button>
+    <button id="klik1">Push To Stop</button>
+    <div class="kotak">Ini adalah kotak</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">></script>
+    <script>
+        $(document).ready(function(){
+            $('#klik').on('click',function(){
+                let posisi = $('.kotak').offset().left
+                console.log(posisi);
+            });
+        }); 
+    
+    </script>
+</body>
+</html>
